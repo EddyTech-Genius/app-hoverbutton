@@ -1,0 +1,71 @@
+* {
+  margin: 0%;
+}
+
+body {
+  background-color: rgb(4, 29, 27);
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+.wrapper {
+  .container {
+    button {
+      height: 40px;
+      width: 120px;
+      border-radius: 1.3rem;
+      transform: scale(1.2);
+      border: none;
+      position: relative;
+      overflow: hidden;
+      background-color: white;
+      &:hover {
+        cursor: pointer;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        transform: translateY(45px);
+        transition: ease-in-out 1s;
+        left: -10px;
+        height: 7rem;
+        width: 9rem;
+        border-radius: 100% 100% 100% 100%;
+        background-color: white;
+        z-index: -1;
+      }
+      &:hover {
+        &::after {
+          // animation-name: effect;
+          // animation-duration: 1s;
+          // animation-fill-mode: both;
+          transform: translateY(-70px);
+          transition: ease-in-out 1s;
+        }
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 40px;
+        width: 150px;
+        background-color: rgb(8, 227, 8);
+        z-index: -1;
+      }
+      .fa-solid {
+        margin-left: 3px;
+      }
+    }
+  }
+}
+
+// @keyframes effect {
+//   0% {
+//     transform: translateY(0px);
+//   }
+//   100% {
+//     transform: translateY(-70px);
+//   }
+// }
